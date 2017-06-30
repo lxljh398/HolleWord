@@ -1,1 +1,5 @@
-D:\lixin\GitHub\HolleWord\HolleWord\obj\Debug\HolleWord.csprojResolveAssemblyReference.cache
+D:\lixin\GitHub\HolleWord\HolleWord\bin\Debug\HolleWord.exe.config
+D:\lixin\GitHub\HolleWord\HolleWord\bin\Debug\HolleWord.exe
+D:\lixin\GitHub\HolleWord\HolleWord\bin\Debug\HolleWord.pdb
+D:\lixin\GitHub\HolleWord\HolleWord\obj\Debug\HolleWord.exe
+D:\lixin\GitHub\HolleWord\HolleWord\obj\Debug\HolleWord.pdb

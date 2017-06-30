@@ -1,0 +1,5 @@
+D:\lixin\GitHub\HolleWord\AsyncAndAwait\bin\Debug\AsyncAndAwait.exe.config
+D:\lixin\GitHub\HolleWord\AsyncAndAwait\bin\Debug\AsyncAndAwait.exe
+D:\lixin\GitHub\HolleWord\AsyncAndAwait\bin\Debug\AsyncAndAwait.pdb
+D:\lixin\GitHub\HolleWord\AsyncAndAwait\obj\Debug\AsyncAndAwait.exe
+D:\lixin\GitHub\HolleWord\AsyncAndAwait\obj\Debug\AsyncAndAwait.pdb

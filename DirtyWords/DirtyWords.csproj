@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EB8F9998-4526-447B-A091-B7939F34763D}</ProjectGuid>
+    <ProjectGuid>{A3A77F08-0184-49AE-823A-EB74DEC542A2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>HolleWord</RootNamespace>
-    <AssemblyName>HolleWord</AssemblyName>
+    <RootNamespace>DirtyWords</RootNamespace>
+    <AssemblyName>DirtyWords</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="KudyStudio">
+      <HintPath>E:\YChain\ApiService\Bins\KudyStudio.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,11 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KudyStudioFilteringTest\CodeTimer.cs" />
+    <Compile Include="KudyStudioFilteringTest\Program.cs" />
+    <Compile Include="SelfMothad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScratchOff.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DirtyWordsDictionary.txt" />
+    <Content Include="KudyStudio.dll.net\KudyStudio.dll" />
+    <Content Include="KudyStudio.dll.net\KudyStudio.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
