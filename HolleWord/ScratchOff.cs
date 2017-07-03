@@ -53,10 +53,20 @@ namespace Demo
 
 
 
-            PercentageRandom(2);
+            //PercentageRandom(2);
 
 
             //CreateCards();
+
+            //List<string> num = new List<string>() { "10", "J", "8", "Q", "K", "9", "A" };
+            //List<string> num2 = new List<string>() { "3", "4", "2", "A", "5" };
+            ////IsContinuation(num);
+            //List<string> a = RecurrenceNumbers(num);
+            //List<string> b = RecurrenceNumbers(num2);
+            List<CardColors> colors = new List<CardColors>() { CardColors.Club, CardColors.Club, CardColors.Club, CardColors.Diamond };
+            List<CardColors> c = RecurrenceColors(colors);
+            //List<string> c= GetRandomCardNumbers(5, CARDNUMBERS);
+
 
         }
 
@@ -96,7 +106,7 @@ namespace Demo
         // 0出现的概率为%43.259 
         readonly static int NOTWINNING = WINCHANCEVALUE;//(中奖线到最大值为未中奖)
         // 20出现的概率为与中奖率比率 52.872% 
-        readonly static int PAIRS = WINCHANCEVALUE- Convert.ToInt32(WINCHANCEVALUE * 0.52872);
+        readonly static int PAIRS = WINCHANCEVALUE - Convert.ToInt32(WINCHANCEVALUE * 0.52872);
         // 30出现的概率为与中奖率比率 26.436% 
         readonly static int TWOPAIRS = PAIRS - Convert.ToInt32(WINCHANCEVALUE * 0.26436);
         // 50出现的概率为与中奖率比率 17.624%
@@ -201,8 +211,8 @@ namespace Demo
         /// <returns></returns>
         private static List<Card> GetLotteryNumber4NotWinning()
         {
-            List<string> cardNumbers = GetRandomCardNumbers(5, CARDNUMBERS);
-            List<CardColors> cardColors = GetRandomCardColor(5, CARDCOLOR);
+            List<string> cardNumbers = RecurrenceNumbers(GetRandomCardNumbers(5, CARDNUMBERS));//递归处理顺子
+            List<CardColors> cardColors = RecurrenceColors(GetRandomCardColor(5, CARDCOLOR));//递归处理同花
             List<Card> list = new List<Card>();
             for (int i = 0; i < cardNumbers.Count; i++)
             {
@@ -213,8 +223,72 @@ namespace Demo
                 };
                 list.Add(card);
             }
+            list.GroupBy(p => p.Number).Count();
             return list;
         }
+
+
+        public static List<string> RecurrenceNumbers(List<string> cardNumbers)
+        {
+            List<string> newCardNumbers = cardNumbers;
+            if (IsContinuation(newCardNumbers))
+                return RecurrenceNumbers(GetRandomCardNumbers(5, CARDNUMBERS));
+            else
+                return newCardNumbers;
+        }
+
+        public static List<CardColors> RecurrenceColors(List<CardColors> cardColors)
+        {
+            List<CardColors> newCardNumbers = cardColors;
+            if (newCardNumbers.GroupBy(p => p).Count() == 1)
+                return RecurrenceColors(GetRandomCardColor(5, CARDCOLOR));
+            else
+                return newCardNumbers;
+        }
+
+        /// <summary>
+        /// 卡牌数字是否连续
+        /// </summary>
+        /// <param name="qwe"></param>
+        /// <returns></returns>
+        private static bool IsContinuation(List<string> qwe)
+        {
+
+            if (qwe.Contains("J"))
+            {
+                qwe[qwe.FindIndex(v1 => v1 == "J")] = "11";
+            }
+            if (qwe.Contains("Q"))
+            {
+                qwe[qwe.FindIndex(v1 => v1 == "Q")] = "12";
+            }
+            if (qwe.Contains("K"))
+            {
+                qwe[qwe.FindIndex(v1 => v1 == "K")] = "13";
+                if (qwe.Contains("A"))
+                    qwe[qwe.FindIndex(v1 => v1 == "A")] = "14";
+            }
+            else
+            {
+                if (qwe.Contains("A"))
+                    qwe[qwe.FindIndex(v1 => v1 == "A")] = "1";
+            }
+            var newlist = qwe.Select<string, int>(x => Convert.ToInt32(x)).OrderBy(p => p).ToList();
+            bool flag = true;
+            for (int i = 0; i < newlist.Count() - 1; i++)
+            {
+                int temp = newlist[i + 1] - newlist[i];
+                if (temp != 1)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+
+
+
         /// <summary>
         /// 20元/对子
         /// </summary>
@@ -454,7 +528,7 @@ namespace Demo
         {
             Random random = new Random();
             int a = random.Next(13);
-            List<string> numbers = nums.OrderBy(x => random.Next()).Take(getNumber).ToList();
+            List<string> numbers = nums.OrderBy(x => Guid.NewGuid()).Take(getNumber).ToList();
             return numbers;
         }
         /// <summary>
