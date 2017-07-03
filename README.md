@@ -39,3 +39,20 @@ List<string> newList = list.ConvertAll<string>(x => x.ToString());
         }
 ```
 + 类型强制转换等...
+
+## CSharp6 类 C#新特性学习
++ 表达式方法体 =>
++ 字符串插值
++ 空操作符 ( ?. )
++ 在Catch和Finally里使用Await
++ 自动属性初始化器
++ 只读自动属性
+
+
+## Json 类 Json处理
+![Alt text](Images/Json.png)
+
+
+## RNGCryptoServiceProviderDemo 类 随机数
++ 产生随机数
++ 产生随机字符

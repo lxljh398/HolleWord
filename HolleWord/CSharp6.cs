@@ -45,7 +45,7 @@ namespace Demo
         public class User
         {
             public string Name { get; set; }
-            public int Age { get; set; }
+            public int Age { get; set; } = 25;
             public void SayHello()
             {
                 Console.WriteLine("Ha Ha");
