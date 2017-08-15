@@ -63,11 +63,30 @@ namespace Demo
             ////IsContinuation(num);
             //List<string> a = RecurrenceNumbers(num);
             //List<string> b = RecurrenceNumbers(num2);
-            List<CardColors> colors = new List<CardColors>() { CardColors.Club, CardColors.Club, CardColors.Club, CardColors.Diamond };
-            List<CardColors> c = RecurrenceColors(colors);
+            //List<CardColors> colors = new List<CardColors>() { CardColors.Club, CardColors.Club, CardColors.Club, CardColors.Diamond };
+            //List<CardColors> c = RecurrenceColors(colors);
             //List<string> c= GetRandomCardNumbers(5, CARDNUMBERS);
 
 
+
+            string p = MD5Encrypt("123123", "U#fd7j*pK=3.");
+
+
+        }
+
+        private static string MD5Encrypt(string str, string encrypt)
+        {
+            using (MD5 md5 = new MD5CryptoServiceProvider())
+            {
+                byte[] bytes = md5.ComputeHash(Encoding.UTF8.GetBytes(str + encrypt));
+                StringBuilder sb = new StringBuilder();
+
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    sb.Append(bytes[i].ToString("x2"));
+                }
+                return sb.ToString();
+            }
         }
 
         private static List<Cards> CreateCards()
