@@ -14,6 +14,8 @@ namespace HolleWord
         /// <summary>
         /// 判断银行卡
         /// http://blog.csdn.net/archer119/article/details/52832499
+        /// https://github.com/digglife/cnbankcard
+        /// https://www.digglife.net/articles/cnbankcard.html
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
