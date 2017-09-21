@@ -2,3 +2,4 @@ D:\lixin\GitHub\HolleWord\Utilities\bin\Debug\Utilities.dll
 D:\lixin\GitHub\HolleWord\Utilities\bin\Debug\Utilities.pdb
 D:\lixin\GitHub\HolleWord\Utilities\obj\Debug\Utilities.dll
 D:\lixin\GitHub\HolleWord\Utilities\obj\Debug\Utilities.pdb
+D:\lixin\GitHub\HolleWord\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache

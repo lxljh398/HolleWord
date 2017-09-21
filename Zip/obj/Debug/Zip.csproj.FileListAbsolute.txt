@@ -1,0 +1,9 @@
+D:\lixin\GitHub\HolleWord\Zip\obj\Debug\ZipDemo.Form1.resources
+D:\lixin\GitHub\HolleWord\Zip\obj\Debug\Zip.Properties.Resources.resources
+D:\lixin\GitHub\HolleWord\Zip\obj\Debug\Zip.csproj.GenerateResource.Cache
+D:\lixin\GitHub\HolleWord\Zip\bin\Debug\Zip.exe.config
+D:\lixin\GitHub\HolleWord\Zip\bin\Debug\Zip.exe
+D:\lixin\GitHub\HolleWord\Zip\bin\Debug\Zip.pdb
+D:\lixin\GitHub\HolleWord\Zip\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\lixin\GitHub\HolleWord\Zip\obj\Debug\Zip.exe
+D:\lixin\GitHub\HolleWord\Zip\obj\Debug\Zip.pdb

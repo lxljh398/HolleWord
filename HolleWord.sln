@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolleWord", "HolleWord\Holl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{5121077B-5887-4DE0-8CC0-AA9773934A55}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zip", "Zip\Zip.csproj", "{3738DE10-C8B3-4F32-907E-9362C20A2E12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5121077B-5887-4DE0-8CC0-AA9773934A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5121077B-5887-4DE0-8CC0-AA9773934A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5121077B-5887-4DE0-8CC0-AA9773934A55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3738DE10-C8B3-4F32-907E-9362C20A2E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3738DE10-C8B3-4F32-907E-9362C20A2E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3738DE10-C8B3-4F32-907E-9362C20A2E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3738DE10-C8B3-4F32-907E-9362C20A2E12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
