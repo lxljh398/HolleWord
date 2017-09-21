@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OwinConsoleApp</name>
+    </assembly>
+    <members>
+        <member name="T:OwinConsoleApp.StudentController">
+            <summary>
+            学生信息
+            </summary>
+        </member>
+        <member name="M:OwinConsoleApp.StudentController.Get">
+            <summary>
+            得到所有的学生信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OwinConsoleApp.StudentController.Get(System.Int32)">
+            <summary>
+            根据学生编号得到学生信息
+            </summary>
+            <param name="Id">学生编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:OwinConsoleApp.StudentController.Post(System.String)">
+            <summary>
+            添加学生
+            </summary>
+            <param name="studentModel">学生实体</param>
+            <remarks>添加一个新的学生</remarks>
+            <response code="400">Bad request </response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:OwinConsoleApp.StudentController.Put(System.Int32,System.String)">
+            <summary>
+            修改学生信息
+            </summary>
+            <param name="Id">学生编号</param>
+            <param name="studentModel">学生实体</param>
+        </member>
+        <member name="M:OwinConsoleApp.StudentController.Delete(System.Int32)">
+            <summary>
+            删除学生信息
+            </summary>
+            <param name="Id">学生编号</param>
+        </member>
+    </members>
+</doc>
